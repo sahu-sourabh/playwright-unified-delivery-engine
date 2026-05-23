@@ -1,0 +1,23 @@
+{
+  "name": "playwright-typescript-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahu-sourabh/Playwright-TypeScript-Lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sahu-sourabh/Playwright-TypeScript-Lab/issues"
+  },
+  "homepage": "https://github.com/sahu-sourabh/Playwright-TypeScript-Lab#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
+  }
+}
