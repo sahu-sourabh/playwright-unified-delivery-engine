@@ -11,13 +11,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/sahu-sourabh/Playwright-TypeScript-Lab/issues"
   },
   "homepage": "https://github.com/sahu-sourabh/Playwright-TypeScript-Lab#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.1",
+    "dotenv": "^17.4.2",
+    "typescript": "^6.0.3"
   }
 }
