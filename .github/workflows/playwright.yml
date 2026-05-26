@@ -6,22 +6,31 @@ on:
     branches: [ main, master ]
 jobs:
   test:
-    timeout-minutes: 60
+    timeout-minutes: 15 # Optimized down from 60 to prevent wasteful runner usage billing
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+        
     - name: Install dependencies
       run: npm ci
+      
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+      
     - name: Run Playwright tests
+      # Map clear default values for public servers so the pipeline runs instantly on every push
+      env:
+        CONDUIT_UI_URL: ${{ secrets.CONDUIT_UI_URL || 'https://demo.realworld.show' }}
+        CONDUIT_API_URL: ${{ secrets.CONDUIT_API_URL || 'https://api.realworld.show/api' }}
+        DEFAULT_TEST_PASSWORD: ${{ secrets.DEFAULT_TEST_PASSWORD || 'PipelineSecurePass123!' }}
       run: npx playwright test
+      
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
         path: playwright-report/
-        retention-days: 30
+        retention-days: 7 # Optimized from 30 days to save repository space footprint
