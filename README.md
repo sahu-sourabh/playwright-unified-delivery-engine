@@ -1,4 +1,4 @@
-# 🎭 Playwright Unified Omnichannel Engine (`playwright-unified-omnichannel-engine`)
+# 🎭 Playwright Unified Delivery Engine 
 
 [![Playwright Tests](https://github.com/sahu-sourabh/Playwright-TypeScript-Lab/actions/workflows/playwright.yml/badge.svg)](https://github.com/sahu-sourabh/Playwright-TypeScript-Lab/actions/workflows/playwright.yml)
 
